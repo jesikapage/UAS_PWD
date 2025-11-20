@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSI | Prodi Arcana Intelektual (Ravenclaw)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- TEMA UTAMA --- */
+        body { font-family: 'Merriweather', serif; background-color: #f4f4f4; }
+        .cinzel-font { font-family: 'Cinzel', serif; }
+        
+        /* WARNA KHAS RAVENCLAW: Biru Tua (#0e1a40) & Perunggu (#b08d57) */
+        .color-ravenclaw { color: #0e1a40 !important; }
+        .bg-ravenclaw-dark { background-color: #0e1a40 !important; } 
+        .border-ravenclaw { border-color: #b08d57 !important; } 
+        .bg-ravenclaw-light { background-color: #f0f4f8; } 
+        
+        /* WARNA NAV HCMAS (DIJAGA TETAP SAMA) */
+        .bg-hmas-nav { background-color: #5d4037; } 
+        .dropdown-menu { background-color: #5d4037; }
+        .dropdown-item:hover { background-color: #a46d12; }
+
+        /* HEADER */
+        .main-header { 
+            background: linear-gradient(rgba(14, 26, 64, 0.9), rgba(14, 26, 64, 0.9)), url('library_bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 80px 0; 
+            border-bottom: 7px solid #b08d57; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .main-header h1 { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+
+        /* CARD DAN ELEMEN KHUSUS */
+        .prodi-card { 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+        .prodi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(14, 26, 64, 0.3);
+        }
+
+        /* FILOSOFI BOX */
+        .philosophy-box {
+            border-left: 5px solid #b08d57;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .philosophy-box i {
+            color: #b08d57;
+            font-size: 2rem;
+        }
+
+        /* TABLE */
+        .table-responsive {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px; 
+        }
+        .table-ravenclaw thead {
+            background-color: #0e1a40;
+            color: white;
+            border-color: #b08d57;
+        }
+        .table-ravenclaw tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* CAROUSEL (Tinggi 750px) */
+        .carousel-item img {
+            height: 750px; /* Tinggi disesuaikan untuk frame yang sangat besar/persegi */
+            object-fit: cover;
+        }
+
+        /* Gaya tambahan untuk logo gambar */
+        .ravenclaw-logo-img {
+            max-width: 150px; /* Atur ukuran maksimum logo */
+            height: auto;
+            display: block; /* Agar margin auto bekerja */
+            margin: auto; /* Untuk menengahkan gambar */
+            background-color: transparent; /* Pastikan background transparan jika PNG */
+            padding: 5px; /* Sedikit padding jika perlu */
+            border-radius: 10px; /* Sudut sedikit membulat */
+        }
+        
+        /* PROFIL KAPRODI */
+        .kaprodi-profile {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s;
+        }
+        .kaprodi-profile:hover {
+            box-shadow: 0 6px 12px rgba(14, 26, 64, 0.2);
+        }
+        .kaprodi-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #b08d57;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header text-center">
+        <i class="bi bi-person-workspace display-3 text-info mb-3"></i>
+        <h1 class="cinzel-font display-4 fw-bold">Program Studi Arcana Intelektual</h1>
+        <p class="lead mt-3">Fokus pada Teori Magis, Fisika Mantra, dan Inovasi Pengetahuan (Ravenclaw)</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-hmas-nav shadow">
+        <div class="container-fluid container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Program Studi</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item active" aria-current="page" href="ravenclaw.html">Ravenclaw (Arcana Intelektual)</a></li>
+                            <li><a class="dropdown-item" href="gryffindor.html">Gryffindor (Pertahanan Magis)</a></li>
+                            <li><a class="dropdown-item" href="hufflepuff.html">Hufflepuff (Herbologi & Ekologi)</a></li>
+                            <li><a class="dropdown-item" href="slytherin.html">Slytherin (Strategi & Rekayasa Daya)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="penyihir.html">Penyihir</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pengumuman.html">Pengumuman</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content py-5">
+        <div class="container bg-white p-5 shadow rounded-3">
+            
+            <section id="logo-house" class="text-center mb-5 p-4 bg-ravenclaw-light rounded border border-2 border-ravenclaw">
+                <h2 class="cinzel-font color-ravenclaw mb-4"><i class="bi bi-shield-fill me-2"></i>Simbol Kebanggaan Ravenclaw</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="ravenclaw_logo.png" alt="Logo Ravenclaw" class="ravenclaw-logo-img">
+                    </div>
+                    <div class="col-md-8 text-md-start mt-3 mt-md-0">
+                        <p class="lead">Prodi ini bangga menggunakan simbol **Elang (Eagle)**, melambangkan kekuatan pikiran, kebangkitan, dan pandangan jauh ke depan.</p>
+                        <p class="small mb-0">Warna Resmi: Biru Tua (Navy) dan Perunggu (Bronze/Copper).</p>
+                        <p class="small">Sifat Utama: Kecerdasan, Belajar, Kreativitas, dan Kritis.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="prodi-intro" class="mb-5 p-4 bg-ravenclaw-light rounded border border-2 border-primary">
+                <h2 class="cinzel-font color-ravenclaw pb-2 mb-3 border-bottom border-ravenclaw"><i class="bi bi-lightbulb-fill me-2"></i>Visi & Filosofi Ravenclaw</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <p class="lead">Prodi ini ditujukan untuk penyihir yang haus akan pengetahuan, yang berani mempertanyakan batas-batas sihir, dan yang bercita-cita menjadi **peneliti dan inovator magis** terdepan.</p>
+                        <p>Kami berfokus pada **fisika mantra**, kriptografi kuno, teori transmutasi tingkat tinggi, dan pengembangan sihir yang belum teruji. Lulusan kami dipersiapkan untuk bekerja di Departemen Misteri atau pusat riset sihir global.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="philosophy-box mt-3 mt-md-0">
+                            <i class="bi bi-quote"></i>
+                            <p class="fst-italic mb-0">"Kecerdasan tanpa batas adalah harta terbesar bagi setiap penyihir. Kami mencari mereka yang otaknya paling tajam."</p>
+                            <footer class="blockquote-footer mt-2">Prof. Rowena Ravenclaw</footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="profil-kaprodi" class="mb-5">
+                <h3 class="cinzel-font color-ravenclaw pb-3 mb-4 border-bottom border-ravenclaw"><i class="bi bi-person-badge-fill me-2"></i>Ketua Program Studi</h3>
+                <div class="kaprodi-profile row align-items-center">
+                    <div class="col-md-3 text-center mb-3 mb-md-0">
+                        <img src="https://picsum.photos/seed/kaprodi/150/150" alt="Foto Prof. Elara Vane" class="kaprodi-img">
+                    </div>
+                    <div class="col-md-9">
+                        <h4 class="color-ravenclaw cinzel-font">Prof. Dr. Elara Vane, M.Sc. (Magis Causa)</h4>
+                        <p class="fst-italic small mb-2">Pakar Kriptografi Rune Kuno & Fisika Mantra Kuantum</p>
+                        <p class="mb-0">Prof. Elara memimpin prodi dengan dedikasi pada penelitian teoretis yang inovatif. Beliau adalah lulusan terbaik dari **Akademi Arcane Stockholm** dan telah memublikasikan lima buku tentang algoritma Transfigurasi. Dibawah kepemimpinan beliau, prodi ini fokus menciptakan pengetahuan magis, bukan sekadar mengulanginya.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="kurikulum-dasar">
+                <h3 class="cinzel-font color-ravenclaw pb-3 mb-4 border-bottom border-ravenclaw"><i class="bi bi-star-fill me-2"></i>Mata Kuliah Dasar Fakultas (Wajib)</h3>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-ravenclaw">
+                        <thead>
+                            <tr>
+                                <th scope="col">Kode MK</th>
+                                <th scope="col">Nama Mata Kuliah</th>
+                                <th scope="col">SKS</th>
+                                <th scope="col">Deskripsi Singkat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>FSRD101</td><td>Filsafat Sains & Magis</td><td>2</td><td>Mempelajari dasar-dasar pemikiran ilmiah dan magis, termasuk hakikat pengetahuan, kebenaran, dan batas etika dalam penggunaan sihir.</td></tr>
+                            <tr><td>FSRD102</td><td>Logika & Penalaran Kritis</td><td>2</td><td>Mengembangkan kemampuan berpikir analitis, penalaran formal, dan pemecahan masalah logis khas Ravenclaw.</td></tr>
+                            <tr><td>FSRD103</td><td>Sejarah Ilmu Sihir Dunia</td><td>3</td><td>Kajian perkembangan sihir dari zaman kuno hingga era modern, termasuk tokoh, artefak, dan peristiwa penting dunia magis.</td></tr>
+                            <tr><td>FSRD104</td><td>Etika Penggunaan Sihir</td><td>2</td><td>Pembahasan batas moral dalam penggunaan sihir agar tidak disalahgunakan, termasuk kajian kasus dunia sihir.</td></tr>
+                            <tr><td>FSRD105</td><td>Metodologi Penelitian Magis</td><td>3</td><td>Belajar merancang penelitian ilmiah dan magis, termasuk teknik observasi, eksperimen, dan pemodelan ritual.</td></tr>
+                            <tr><td>FSRD106</td><td>Astronomi Dasar</td><td>3</td><td>Pengenalan struktur kosmos, fenomena langit, dan hubungan astrologi-magis pada peristiwa astronomis penting.</td></tr>
+                            <tr><td>FSRD107</td><td>Familiar Spirits & Magical Creatures</td><td>3</td><td>Studi tentang makhluk magis pendamping penyihir, karakteristik biologis, serta teknik perawatan dan pemanggilan.</td></tr>
+                            <tr><td>FSRD108</td><td>Pengantar Arithmancy</td><td>3</td><td>Dasar numeromansi dan matematika magis untuk menganalisis pola sihir menggunakan angka dan simbol.</td></tr>
+                            <tr><td>FSRD109</td><td>Herbologi & Botanical Enchantments</td><td>3</td><td>Mengenal tanaman magis, efek alaminya, serta cara mengolahnya menjadi ramuan atau bahan sihir.</td></tr>
+                            <tr><td>FSRD110</td><td>Teori Magis Fundamental</td><td>3</td><td>Pembahasan prinsip-prinsip dasar energi sihir, struktur mantra, dan teori resonansi magis.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <section id="kurikulum-inti">
+                <h3 class="cinzel-font color-ravenclaw pb-3 mb-4 border-bottom border-ravenclaw"><i class="bi bi-book-half me-2"></i>Mata Kuliah Inti Prodi Arcana Intelektual</h3>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-ravenclaw">
+                        <thead>
+                            <tr>
+                                <th scope="col">Kode MK</th>
+                                <th scope="col">Nama Mata Kuliah</th>
+                                <th scope="col">SKS</th>
+                                <th scope="col">Deskripsi Singkat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>AI201</td><td>Arithmancy Lanjutan & Numeromancy</td><td>3</td><td>Pendalaman model numerik untuk memprediksi peristiwa, memperkuat mantra, dan menganalisis fluktuasi energi sihir.</td></tr>
+                            <tr><td>AI202</td><td>Charms Precision Studies</td><td>3</td><td>Studi lanjutan tentang mantra, teknik fokus, dan pengendalian detail dalam pengucapan, gestur, dan intensitas.</td></tr>
+                            <tr><td>AI203</td><td>Transfigurasi Teoretis</td><td>3</td><td>Teori perubahan bentuk materi magis, hukum-hukum batasan transfigurasi, dan aplikasi kompleks.</td></tr>
+                            <tr><td>AI204</td><td>Rune Studies & Ancient Scripts</td><td>3</td><td>Analisis simbol kuno dan rune sihir, termasuk cara membaca, menafsirkan, dan mengaktifkannya.</td></tr>
+                            <tr><td>AI205</td><td>Applied Potions & Elixir Engineering</td><td>3</td><td>Pembuatan ramuan tingkat menengah hingga lanjutan, rekayasa efek eliksir, dan stabilitas bahan magis.</td></tr>
+                            <tr><td>AI206</td><td>Magical Problem Solving & Puzzle Theory</td><td>2</td><td>Teknik pemecahan teka-teki magis, logika portal, riddle Ravenclaw, dan tantangan analitis lainnya.</td></tr>
+                            <tr><td>AI301</td><td>Enchanting Materials & Magical Physics</td><td>3</td><td>Mempelajari sifat fisik bahan magis, konduktivitas sihir, dan teknik penguatan artefak.</td></tr>
+                            <tr><td>AI302</td><td>Magical Data Analysis</td><td>3</td><td>Analisis pola magis menggunakan metode kuantitatif dan visualisasi energi sihir.</td></tr>
+                            <tr><td>AI303</td><td>Predictive Divination Methodology</td><td>3</td><td>Metode ilmiah untuk membaca kemungkinan masa depan dan interpretasi probabilitas takdir.</td></tr>
+                            <tr><td>AI304</td><td>Algorithmic Spellcasting</td><td>3</td><td>Merancang mantra seperti algoritma; struktur input-output energi.</td></tr>
+                            <tr><td>AI401</td><td>Advanced Rational Magic</td><td>3</td><td>Pendalaman sihir berbasis logika dan struktur pemikiran formal.</td></tr>
+                            <tr><td>AI402</td><td>Wand Mechanics & Core Studies</td><td>3</td><td>Mempelajari mekanisme tongkat sihir, bahan inti, dan kecocokan dengan penyihir.</td></tr>
+                            <tr><td>AI403</td><td>Spellcraft Engineering</td><td>3</td><td>Rekayasa mantra baru dengan pendekatan teknis dan desain magis.</td></tr>
+                            <tr><td>AI404</td><td>Arcane Device Prototyping</td><td>3</td><td>Membuat prototipe alat sihir seperti charm amplifier, rune stabilizer, dll.</td></tr>
+                            <tr><td>AI405</td><td>Magical Energy Systems</td><td>3</td><td>Studi tentang aliran energi magis dan konversi antar media.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="karir-prospek" class="mb-5">
+                <h3 class="cinzel-font color-ravenclaw pb-3 mb-4 border-bottom border-ravenclaw"><i class="bi bi-rocket-takeoff me-2"></i>Prospek Karir Lulusan</h3>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="prodi-card card h-100 shadow-sm border-info">
+                            <div class="card-body">
+                                <h5 class="card-title color-ravenclaw"><i class="bi bi-search matkul-icon"></i>Peneliti Arcana</h5>
+                                <p class="card-text small">Mengembangkan teori mantra baru dan merekayasa ulang sihir kuno.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="prodi-card card h-100 shadow-sm border-info">
+                            <div class="card-body">
+                                <h5 class="card-title color-ravenclaw"><i class="bi bi-pc-display matkul-icon"></i>Insinyur Kripto-Magis</h5>
+                                <p class="card-text small">Spesialis dalam keamanan data magis dan komunikasi terenkripsi.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="prodi-card card h-100 shadow-sm border-info">
+                            <div class="card-body">
+                                <h5 class="card-title color-ravenclaw"><i class="bi bi-columns-gap matkul-icon"></i>Ahli Transmutasi Energi</h5>
+                                <p class="card-text small">Mengkonversi dan mengoptimalkan sumber daya sihir untuk kebutuhan industri dan publik.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <section id="galeri-prodi">
+                <h3 class="cinzel-font color-ravenclaw pb-3 mb-4 border-bottom border-ravenclaw"><i class="bi bi-images me-2"></i>Galeri Intelektual Ravenclaw (7 Sudut Pandang)</h3>
+                
+                <div id="RavenclawCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#RavenclawCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    </div>
+                    
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="RG1.jpg" class="d-block w-100" alt="Perpustakaan Kuno">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Ruang Referensi Arcana</h5>
+                                <p>Tempat riset mendalam dan penemuan teori baru.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="RG2.jpg" class="d-block w-100" alt="Observatorium Astronomi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Observatorium Magis</h5>
+                                <p>Pengamatan konstelasi untuk ramalan dan kriptografi langit.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="RG3.jpg" class="d-block w-100" alt="Kelas Arithmancy">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Laboratorium Rune & Arithmancy</h5>
+                                <p>Kelas praktikum pemecahan kode magis tingkat lanjut.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="RG4.jpg" class="d-block w-100" alt="Pengembangan Artefak">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Bengkel Arcane Device</h5>
+                                <p>Fasilitas pembuatan prototipe alat sihir.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="RG5.jpg" class="d-block w-100" alt="Diskusi Filosofi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Debat Filosofi & Etika Sihir</h5>
+                                <p>Mengasah penalaran kritis tentang batas moral sihir.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="RG6.jpg" class="d-block w-100" alt="Sistem Energi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Studi Sistem Energi Magis</h5>
+                                <p>Memahami dan mengelola aliran daya sihir.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="RG7.jpg" class="d-block w-100" alt="Transfigurasi Teoretis">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Teori Transmutasi Kompleks</h5>
+                                <p>Analisis mendalam perubahan bentuk materi magis.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#RavenclawCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#RavenclawCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-ravenclaw-dark text-white text-center py-4 mt-5">
+        <p class="mb-1 cinzel-font">&copy; 2025 ITSI | FSRD - Prodi Arcana Intelektual</p>
+        <p class="small mb-0">Driven by Wisdom, Built by Code.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

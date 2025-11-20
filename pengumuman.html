@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSI | Pengumuman Fakultas & Program Studi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- TEMA UTAMA --- */
+        body { font-family: 'Merriweather', serif; background-color: #f4f4f4; }
+        .cinzel-font { font-family: 'Cinzel', serif; }
+        
+        /* WARNA NAV HCMAS */
+        .bg-hmas-nav { background-color: #5d4037; } 
+        .dropdown-menu { background-color: #5d4037; }
+        .dropdown-item:hover { background-color: #a46d12; }
+
+        /* HEADER */
+        .main-header { 
+            background-color: #a46d12; /* Aksen Coklat Emas */
+            color: white; 
+            padding: 60px 0; 
+            border-bottom: 5px solid #5d4037; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .main-header h1 { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+        
+        /* WARNA TEMA KHUSUS */
+        /* Fakultas (Coklat Tua) */
+        .accordion-facultas .accordion-button { background-color: #5d4037; color: white; border-color: #a46d12;}
+        .accordion-facultas .accordion-button:not(.collapsed) { background-color: #a46d12; color: #1f1f1f; }
+        
+        /* Gryffindor (Merah) */
+        .accordion-gryffindor .accordion-button { background-color: #7f0909; color: white; border-color: #ffc73a; }
+        .accordion-gryffindor .accordion-button:not(.collapsed) { background-color: #ffc73a; color: #1f1f1f; }
+
+        /* Ravenclaw (Biru) */
+        .accordion-ravenclaw .accordion-button { background-color: #0e1a40; color: white; border-color: #949494; }
+        .accordion-ravenclaw .accordion-button:not(.collapsed) { background-color: #949494; color: #1f1f1f; }
+        
+        /* Hufflepuff (Kuning) */
+        .accordion-hufflepuff .accordion-button { background-color: #372e29; color: white; border-color: #ecb31e; }
+        .accordion-hufflepuff .accordion-button:not(.collapsed) { background-color: #ecb31e; color: #1f1f1f; }
+
+        /* Slytherin (Hijau) */
+        .accordion-slytherin .accordion-button { background-color: #1a472a; color: white; border-color: #aaaaaa; }
+        .accordion-slytherin .accordion-button:not(.collapsed) { background-color: #aaaaaa; color: #1f1f1f; }
+        
+        /* Konten Accordion */
+        .accordion-item { border: 1px solid #ddd; margin-bottom: 10px; border-radius: 5px !important; }
+        .accordion-button:focus { box-shadow: none; }
+    </style>
+</head>
+<body>
+
+    <header class="main-header text-center">
+        <i class="bi bi-megaphone display-3 text-white mb-3"></i>
+        <h1 class="cinzel-font display-4 fw-bold">Papan Pengumuman Magis</h1>
+        <p class="lead mt-3">Informasi Terkini dari Fakultas dan Setiap Program Studi</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-hmas-nav shadow">
+        <div class="container-fluid container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Program Studi</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="ravenclaw.html">Ravenclaw (Arcana Intelektual)</a></li>
+                            <li><a class="dropdown-item" href="gryffindor.html">Gryffindor (Pertahanan Magis)</a></li>
+                            <li><a class="dropdown-item" href="hufflepuff.html">Hufflepuff (Herbologi & Ekologi)</a></li>
+                            <li><a class="dropdown-item" href="slytherin.html">Slytherin (Strategi & Rekayasa Daya)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="penyihir.html">Penyihir</a></li>
+                    <li class="nav-item"><a class="nav-link text-white active" aria-current="page" href="pengumuman.html">Pengumuman</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content py-5">
+        <div class="container bg-white p-5 shadow rounded-3">
+            
+            <section id="pengumuman-fakultas" class="mb-5">
+                <h2 class="cinzel-font mb-4 pb-2 border-bottom border-secondary"><i class="bi bi-building me-2"></i>Pengumuman Fakultas (ITSI FSRD)</h2>
+                
+                <div class="accordion accordion-flush accordion-facultas" id="accordionFakultas">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                <i class="bi bi-bookmark-fill me-2"></i> **25 November:** Batas Akhir Pendaftaran Ujian OWL Tingkat Lanjut
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFakultas">
+                            <div class="accordion-body">
+                                <p><strong>Kepada seluruh mahasiswa tingkat akhir:</strong> Pendaftaran Ujian OWL (Ordinary Wizarding Level) dan NEWT (Nastily Exhausting Wizarding Test) akan ditutup pada Senin, 25 November pukul 23.59. Pastikan semua persyaratan administrasi telah dipenuhi di kantor Tata Usaha Sihir.</p>
+                                <p class="small fst-italic text-muted">Posted: 18 November 2025 | Divisi Akademik</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                <i class="bi bi-bookmark-fill me-2"></i> **20 Desember:** Libur Semester Musim Dingin Dimulai
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFakultas">
+                            <div class="accordion-body">
+                                <p>Seluruh kegiatan akademik akan diliburkan mulai 20 Desember 2025 hingga 5 Januari 2026. Asrama akan tetap buka, namun layanan dapur dan perpustakaan akan beroperasi dengan jam terbatas.</p>
+                                <p class="small fst-italic text-muted">Posted: 10 November 2025 | Sekretariat Fakultas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="pengumuman-prodi">
+                <h2 class="cinzel-font mb-4 pb-2 border-bottom border-secondary"><i class="bi bi-lightbulb-fill me-2"></i>Pengumuman Program Studi</h2>
+                
+                <div class="accordion" id="accordionProdi">
+                    
+                    <div class="accordion-item accordion-ravenclaw">
+                        <h2 class="accordion-header" id="headingRavenclaw">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseRavenclaw" aria-expanded="false" aria-controls="collapseRavenclaw">
+                                <i class="bi bi-book-half me-2"></i> **RAVENCLAW:** Workshop Kodifikasi Mantra Baru (Wajib Semester 5)
+                                <span class="badge bg-light text-dark ms-auto">Arcana Intelektual</span>
+                            </button>
+                        </h2>
+                        <div id="collapseRavenclaw" class="accordion-collapse collapse" aria-labelledby="headingRavenclaw" data-bs-parent="#accordionProdi">
+                            <div class="accordion-body">
+                                <p>Wajib bagi mahasiswa Prodi Ravenclaw semester 5. Workshop akan dilaksanakan di Ruang Observasi Astrologi pada tanggal 30 November. Harap membawa buku catatan dan dua belas jenis pena bulu yang berbeda.</p>
+                                <p class="small fst-italic text-muted">Posted: 15 November 2025 | Prodi Ravenclaw</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item accordion-gryffindor">
+                        <h2 class="accordion-header" id="headingGryffindor">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseGryffindor" aria-expanded="false" aria-controls="collapseGryffindor">
+                                <i class="bi bi-shield-fill me-2"></i> **GRYFFINDOR:** Uji Coba Lapangan Mantra Pembatas Area Gelap
+                                <span class="badge bg-light text-dark ms-auto">Pertahanan Magis</span>
+                            </button>
+                        </h2>
+                        <div id="collapseGryffindor" class="accordion-collapse collapse" aria-labelledby="headingGryffindor" data-bs-parent="#accordionProdi">
+                            <div class="accordion-body">
+                                <p>Mahasiswa Pertahanan Magis diundang untuk berpartisipasi dalam uji coba simulasi pertahanan. Latihan akan berlokasi di Hutan Terlarang bagian Utara (dengan pengawasan ketat). Harap hadir tepat waktu dengan jubah perlindungan terbaik Anda.</p>
+                                <p class="small fst-italic text-muted">Posted: 17 November 2025 | Prodi Gryffindor</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item accordion-hufflepuff">
+                        <h2 class="accordion-header" id="headingHufflepuff">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHufflepuff" aria-expanded="false" aria-controls="collapseHufflepuff">
+                                <i class="bi bi-flower3 me-2"></i> **HUFFLEPUFF:** Ekspedisi Pemuliaan Mandrake Langka
+                                <span class="badge bg-light text-dark ms-auto">Herbologi & Ekologi</span>
+                            </button>
+                        </h2>
+                        <div id="collapseHufflepuff" class="accordion-collapse collapse" aria-labelledby="headingHufflepuff" data-bs-parent="#accordionProdi">
+                            <div class="accordion-body">
+                                <p>Kesempatan langka bagi 10 mahasiswa Herbologi terbaik untuk bergabung dalam proyek Profesor Spriggan. Mempelajari teknik pemuliaan Mandrake yang sensitif dan sangat langka. Pendaftaran melalui Kaprodi.</p>
+                                <p class="small fst-italic text-muted">Posted: 19 November 2025 | Prodi Hufflepuff</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item accordion-slytherin">
+                        <h2 class="accordion-header" id="headingSlytherin">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSlytherin" aria-expanded="false" aria-controls="collapseSlytherin">
+                                <i class="bi bi-gem me-2"></i> **SLYTHERIN:** Seminar Strategi Politik di Kementerian Sihir
+                                <span class="badge bg-light text-dark ms-auto">Strategi & Rekayasa Daya</span>
+                            </button>
+                        </h2>
+                        <div id="collapseSlytherin" class="accordion-collapse collapse" aria-labelledby="headingSlytherin" data-bs-parent="#accordionProdi">
+                            <div class="accordion-body">
+                                <p>Seminar wajib yang dibawakan oleh Prof. S. Thorne dan Direktur Biro Hukum Magis. Topik: *Menavigasi Kekuasaan: Hukum dan Ambiguitas Moral*. Ruang Seminar Tertutup, 7 Desember.</p>
+                                <p class="small fst-italic text-muted">Posted: 16 November 2025 | Prodi Slytherin</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-hmas-nav text-white text-center py-4 mt-5">
+        <p class="mb-1 cinzel-font">&copy; 2025 ITSI | FSRD - Papan Pengumuman</p>
+        <p class="small mb-0">Informasi Cepat, Akurat, dan Terproteksi Sihir.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

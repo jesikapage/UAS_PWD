@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSI | Prodi Strategi & Rekayasa Daya (Slytherin)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- TEMA UTAMA --- */
+        body { font-family: 'Merriweather', serif; background-color: #f4f4f4; }
+        .cinzel-font { font-family: 'Cinzel', serif; }
+        
+        /* WARNA KHAS SLYTHERIN: Hijau Zamrud (#1a472a) & Perak (#aaaaaa) */
+        .color-slytherin { color: #1a472a !important; } /* Teks utama Hijau Zamrud */
+        .bg-slytherin-dark { background-color: #1a472a !important; } /* Footer dan Navbar Dark */
+        .border-slytherin { border-color: #aaaaaa !important; } /* Garis dan Aksen Perak */
+        .bg-slytherin-light { background-color: #e7f2e9; } /* Background Hijau Sangat Muda */
+        
+        /* WARNA NAV HCMAS (DIJAGA TETAP SAMA) */
+        .bg-hmas-nav { background-color: #5d4037; } 
+        .dropdown-menu { background-color: #5d4037; }
+        .dropdown-item:hover { background-color: #a46d12; }
+
+        /* HEADER */
+        .main-header { 
+            background: linear-gradient(rgba(26, 71, 42, 0.9), rgba(26, 71, 42, 0.9)), url('manor_bg.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: white; 
+            padding: 80px 0; 
+            border-bottom: 7px solid #aaaaaa; 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .main-header h1 { text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+
+        /* CARD DAN ELEMEN KHUSUS */
+        .prodi-card { 
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+        }
+        .prodi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(26, 71, 42, 0.3);
+        }
+
+        /* FILOSOFI BOX */
+        .philosophy-box {
+            border-left: 5px solid #aaaaaa;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .philosophy-box i {
+            color: #aaaaaa;
+            font-size: 2rem;
+        }
+
+        /* TABLE */
+        .table-responsive {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 30px; 
+        }
+        .table-slytherin thead {
+            background-color: #1a472a; /* Hijau Zamrud */
+            color: white;
+            border-color: #aaaaaa;
+        }
+        .table-slytherin tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        /* CAROUSEL (Tinggi 750px) */
+        .carousel-item img {
+            height: 750px; 
+            object-fit: cover;
+        }
+
+        /* Gaya tambahan untuk logo gambar */
+        .slytherin-logo-img {
+            max-width: 150px; 
+            height: auto;
+            display: block; 
+            margin: auto; 
+            background-color: transparent; 
+            padding: 5px; 
+            border-radius: 10px; 
+        }
+        
+        /* PROFIL KAPRODI */
+        .kaprodi-profile {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 25px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            transition: box-shadow 0.3s;
+        }
+        .kaprodi-profile:hover {
+            box-shadow: 0 6px 12px rgba(26, 71, 42, 0.2);
+        }
+        .kaprodi-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid #aaaaaa; /* Border Perak */
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header text-center">
+        <i class="bi bi-gem display-3 text-light mb-3"></i>
+        <h1 class="cinzel-font display-4 fw-bold">Program Studi Strategi & Rekayasa Daya</h1>
+        <p class="lead mt-3">Fokus pada Kepemimpinan Politik, Optimalisasi Daya Sihir, dan Ambiguitas Moral (Slytherin)</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-hmas-nav shadow">
+        <div class="container-fluid container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-uppercase fw-bold">
+                    <li class="nav-item"><a class="nav-link text-white" href="index.html">Beranda</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Program Studi</a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="ravenclaw.html">Ravenclaw (Arcana Intelektual)</a></li>
+                            <li><a class="dropdown-item" href="gryffindor.html">Gryffindor (Pertahanan Magis)</a></li>
+                            <li><a class="dropdown-item" href="hufflepuff.html">Hufflepuff (Herbologi & Ekologi)</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="slytherin.html">Slytherin (Strategi & Rekayasa Daya)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link text-white" href="penyihir.html">Penyihir</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="pengumuman.html">Pengumuman</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="main-content py-5">
+        <div class="container bg-white p-5 shadow rounded-3">
+            
+            <section id="logo-house" class="text-center mb-5 p-4 bg-slytherin-light rounded border border-2 border-slytherin">
+                <h2 class="cinzel-font color-slytherin mb-4"><i class="bi bi-shield-fill-check me-2"></i>Simbol Kebanggaan Slytherin</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="SLYLogo.jpg" alt="Logo Slytherin" class="slytherin-logo-img">
+                    </div>
+                    <div class="col-md-8 text-md-start mt-3 mt-md-0">
+                        <p class="lead">Prodi ini bangga menggunakan simbol **Ular (Serpent)**, melambangkan ambisi, kepemimpinan, kelicikan, dan kemurnian darah.</p>
+                        <p class="small mb-0">Warna Resmi: Hijau Zamrud (Emerald Green) dan Perak (Silver).</p>
+                        <p class="small">Sifat Utama: Ambisi, Kelicikan, Kepemimpinan, dan Sumber Daya (Resourcefulness).</p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="prodi-intro" class="mb-5 p-4 bg-slytherin-light rounded border border-2 border-primary">
+                <h2 class="cinzel-font color-slytherin pb-2 mb-3 border-bottom border-slytherin"><i class="bi bi-briefcase-fill me-2"></i>Visi & Filosofi Slytherin</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <p class="lead">Prodi ini ditujukan untuk penyihir yang memiliki **ambisi tak terbatas**, yang mampu merencanakan strategi jangka panjang, dan yang bercita-cita menjadi **Menteri, Diplomat Magis, atau Penguasa Kekuatan Ekonomi Sihir**.</p>
+                        <p>Kami berfokus pada **politik magis**, diplomasi, negosiasi, manajemen sumber daya sihir, dan studi pertahanan yang ambigu secara moral. Lulusan kami dipersiapkan untuk posisi kepemimpinan tertinggi di Kementerian Sihir dan Gringotts.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="philosophy-box mt-3 mt-md-0">
+                            <i class="bi bi-quote"></i>
+                            <p class="fst-italic mb-0">"Aku akan mengajar mereka yang memiliki ambisi nyata dan kecerdasan murni—mereka yang ditakdirkan untuk menjadi yang terdepan."</p>
+                            <footer class="blockquote-footer mt-2">Salazar Slytherin</footer>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="profil-kaprodi" class="mb-5">
+                <h3 class="cinzel-font color-slytherin pb-3 mb-4 border-bottom border-slytherin"><i class="bi bi-person-badge-fill me-2"></i>Ketua Program Studi</h3>
+                <div class="kaprodi-profile row align-items-center">
+                    <div class="col-md-3 text-center mb-3 mb-md-0">
+                        <img src="SLYKaprodi.png" alt="Foto Prof. Salazar Thorne" class="kaprodi-img">
+                    </div>
+                    <div class="col-md-9">
+                        <h4 class="color-slytherin cinzel-font">Prof. Dr. Salazar Thorne, M.A. (Magical Administration)</h4>
+                        <p class="fst-italic small mb-2">Pakar Ilmu Politik & Manipulasi Sihir</p>
+                        <p class="mb-0">Prof. Thorne memiliki latar belakang di Kementerian Sihir, khususnya dalam Biro Operasi Rahasia. Beliau mengajarkan bahwa kekuasaan datang dari perencanaan yang cermat dan kemampuan untuk memanfaatkan setiap sumber daya yang ada, baik sihir maupun politik. Beliau dikenal karena strategi negosiasinya yang tak terkalahkan.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+            
+            <section id="kurikulum-dasar">
+                <h3 class="cinzel-font color-slytherin pb-3 mb-4 border-bottom border-slytherin"><i class="bi bi-star-fill me-2"></i>Mata Kuliah Dasar Fakultas (Wajib)</h3>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-slytherin">
+                        <thead>
+                            <tr>
+                                <th scope="col">Kode MK</th>
+                                <th scope="col">Nama Mata Kuliah</th>
+                                <th scope="col">SKS</th>
+                                <th scope="col">Deskripsi Singkat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>FSSR101</td><td>Filsafat Ambisi & Kekuasaan</td><td>2</td><td>Kajian etika kekuasaan, moralitas, dan batas antara ambisi pribadi dan kepentingan publik sihir.</td></tr>
+                            <tr><td>FSSR102</td><td>Psikologi Kepemimpinan & Pengaruh</td><td>2</td><td>Mempelajari cara memengaruhi keputusan orang lain melalui sihir dan teknik non-sihir.</td></tr>
+                            <tr><td>FSSR103</td><td>Sejarah Dinasti Sihir Dunia</td><td>3</td><td>Kajian keluarga sihir berpengaruh, aliansi politik kuno, dan perpindahan kekuasaan.</td></tr>
+                            <tr><td>FSSR104</td><td>Hukum & Regulasi Sihir Internasional</td><td>2</td><td>Pembahasan perjanjian antar-negara sihir, yurisdiksi, dan penyelesaian konflik politik.</td></tr>
+                            <tr><td>FSSR105</td><td>Metodologi Perencanaan Strategis Magis</td><td>3</td><td>Teknik merancang rencana jangka panjang untuk tujuan politik, ekonomi, atau militer.</td></tr>
+                            <tr><td>FSSR106</td><td>Astronomi & Ramalan Ekonomi Magis</td><td>3</td><td>Korelasi antara pergerakan planet dengan fluktuasi pasar sihir dan investasi.</td></tr>
+                            <tr><td>FSSR107</td><td>Makhluk Magis Sumber Daya & Diplomasi</td><td>3</td><td>Studi tentang Makhluk Magis sebagai sumber daya strategis, tenaga kerja, atau alat negosiasi.</td></tr>
+                            <tr><td>FSSR108</td><td>Dasar Ilmu Occlumency & Legilimency</td><td>3</td><td>Pengantar dasar mempertahankan dan membaca pikiran (kemampuan kunci Slytherin).</td></tr>
+                            <tr><td>FSSR109</td><td>Ramuan Strategis & Pemikat</td><td>3</td><td>Mengenal ramuan untuk memengaruhi emosi, daya tarik, atau kejujuran (misalnya Veritaserum).</td></tr>
+                            <tr><td>FSSR110</td><td>Teori Daya Sihir Maksimal</td><td>3</td><td>Prinsip ilmiah dan magis untuk mengoptimalkan output sihir dari tongkat atau artefak.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <section id="kurikulum-inti">
+                <h3 class="cinzel-font color-slytherin pb-3 mb-4 border-bottom border-slytherin"><i class="bi bi-book-half me-2"></i>Mata Kuliah Inti Prodi Strategi & Rekayasa Daya</h3>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered table-slytherin">
+                        <thead>
+                            <tr>
+                                <th scope="col">Kode MK</th>
+                                <th scope="col">Nama Mata Kuliah</th>
+                                <th scope="col">SKS</th>
+                                <th scope="col">Deskripsi Singkat</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>SRD201</td><td>Occlumency & Legilimency Lanjutan</td><td>3</td><td>Penguasaan penuh seni melindungi dan menembus pikiran lawan.</td></tr>
+                            <tr><td>SRD202</td><td>Charms Efisiensi Energi Sihir</td><td>3</td><td>Mantra untuk melakukan Charms kompleks dengan konsumsi daya minimum.</td></tr>
+                            <tr><td>SRD203</td><td>Transfigurasi Ekonomi & Kekayaan</td><td>3</td><td>Transfigurasi jangka pendek dan panjang yang melibatkan barang berharga (etika dibahas).</td></tr>
+                            <tr><td>SRD204</td><td>Diplomasi Magis & Seni Negosiasi</td><td>3</td><td>Teknik mencapai kesepakatan politik atau bisnis di dunia sihir.</td></tr>
+                            <tr><td>SRD205</td><td>Ramuan Pengubah Keberuntungan (Felix Felicis)</td><td>3</td><td>Teori di balik ramuan keberuntungan dan aplikasinya dalam strategi.</td></tr>
+                            <tr><td>SRD206</td><td>Jaringan Kekuatan & Aliansi Rahasia</td><td>2</td><td>Membangun dan mempertahankan jaringan politik dan kekuasaan yang kuat di dunia magis.</td></tr>
+                            <tr><td>SRD301</td><td>Manipulasi Jampi & Sihir Terselubung</td><td>3</td><td>Penggunaan sihir secara halus untuk memengaruhi hasil tanpa disadari (Non-Verbal & Unseen Charms).</td></tr>
+                            <tr><td>SRD302</td><td>Manajemen Krisis Politik Magis</td><td>3</td><td>Mengelola skandal, perang sihir skala kecil, dan ancaman non-tempur.</td></tr>
+                            <tr><td>SRD303</td><td>Penciptaan & Pemanfaatan Artefak Berdaya Tinggi</td><td>3</td><td>Rekayasa artefak yang dapat menyimpan dan mengeluarkan sihir dalam jumlah besar.</td></tr>
+                            <tr><td>SRD304</td><td>Ekonomi & Pasar Sihir Gelap</td><td>3</td><td>Studi tentang pasar ilegal dan cara mengendalikan atau menghapusnya.</td></tr>
+                            <tr><td>SRD401</td><td>Strategi Penguasaan Kementerian Sihir</td><td>3</td><td>Analisis jalur karir dan taktik untuk mencapai posisi tertinggi dalam pemerintahan sihir.</td></tr>
+                            <tr><td>SRD402</td><td>Proyeksi & Pertahanan Sihir Jarak Jauh</td><td>3</td><td>Mengirim dan mempertahankan mantra yang jauh melampaui batas pandangan.</td></tr>
+                            <tr><td>SRD403</td><td>Rekayasa Mantra Tanda Tangan</td><td>3</td><td>Merancang mantra unik yang menjadi ciri khas dan keunggulan kompetitif.</td></tr>
+                            <tr><td>SRD404</td><td>Pertahanan Terhadap Sihir Infiltrasi</td><td>3</td><td>Melindungi diri dan aset dari mata-mata sihir dan serangan mental.</td></tr>
+                            <tr><td>SRD405</td><td>Ilmu Warisan Darah & Kekuatan Keturunan</td><td>3</td><td>Studi tentang bagaimana garis keturunan sihir dapat memengaruhi potensi magis.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="karir-prospek" class="mb-5">
+                <h3 class="cinzel-font color-slytherin pb-3 mb-4 border-bottom border-slytherin"><i class="bi bi-rocket-takeoff me-2"></i>Prospek Karir Lulusan</h3>
+                <div class="row">
+                    <div class="col-lg-4 mb-4">
+                        <div class="prodi-card card h-100 shadow-sm border-info">
+                            <div class="card-body">
+                                <h5 class="card-title color-slytherin"><i class="bi bi-bank matkul-icon"></i>Pejabat Kementerian/Diplomat</h5>
+                                <p class="card-text small">Memimpin departemen, mengatur kebijakan, atau mewakili negara di kancah sihir global.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="prodi-card card h-100 shadow-sm border-info">
+                            <div class="card-body">
+                                <h5 class="card-title color-slytherin"><i class="bi bi-cash-stack matkul-icon"></i>Konsultan Keuangan Magis</h5>
+                                <p class="card-text small">Mengelola aset, investasi, dan pasar di Gringotts atau lembaga keuangan sihir lainnya.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mb-4">
+                        <div class="prodi-card card h-100 shadow-sm border-info">
+                            <div class="card-body">
+                                <h5 class="card-title color-slytherin"><i class="bi bi-fingerprint matkul-icon"></i>Agen Intelijen Magis</h5>
+                                <p class="card-text small">Bekerja di departemen rahasia, menggunakan Occlumency dan Legilimency untuk keamanan negara.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <section id="galeri-prodi">
+                <h3 class="cinzel-font color-slytherin pb-3 mb-4 border-bottom border-slytherin"><i class="bi bi-images me-2"></i>Galeri Ambisi Slytherin (7 Sudut Pandang)</h3>
+                
+                <div id="SlytherinCarousel" class="carousel slide shadow-lg" data-bs-ride="carousel">
+                    
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        <button type="button" data-bs-target="#SlytherinCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                    </div>
+                    
+                    <div class="carousel-inner rounded">
+                        <div class="carousel-item active">
+                            <img src="SS1.jpg" class="d-block w-100" alt="Ruang Dewan">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Ruang Dewan Strategi Rahasia</h5>
+                                <p>Tempat negosiasi tingkat tinggi dan perencanaan politik.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="SS2.jpg" class="d-block w-100" alt="Diplomasi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Simulasi Diplomasi & Negosiasi</h5>
+                                <p>Pelatihan untuk memenangkan hati dan pikiran lawan bicara.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="SS3.jpg" class="d-block w-100" alt="Occlumency">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Klinik Occlumency & Legilimency</h5>
+                                <p>Penguasaan seni pikiran dan pertahanan mental.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="SS4.jpg" class="d-block w-100" alt="Artefak Daya Tinggi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Laboratorium Rekayasa Artefak Daya</h5>
+                                <p>Menciptakan dan mengoptimalkan alat sihir yang kuat.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="SS5.jpg" class="d-block w-100" alt="Sihir Ekonomi">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Studi Fluktuasi Pasar Sihir</h5>
+                                <p>Analisis tren ekonomi untuk kepentingan finansial magis.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="SS6.jpg" class="d-block w-100" alt="Ramuan Pengaruh">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Pembuatan Ramuan Strategis</h5>
+                                <p>Fokus pada ramuan untuk kontrol sosial dan keberuntungan.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="SS7.jpg" class="d-block w-100" alt="Sejarah Dinasti">
+                            <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 p-2 rounded">
+                                <h5>Kajian Sejarah Dinasti & Elitisme</h5>
+                                <p>Mempelajari silsilah dan pengaruh keluarga sihir kuno.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#SlytherinCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#SlytherinCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-slytherin-dark text-white text-center py-4 mt-5">
+        <p class="mb-1 cinzel-font">&copy; 2025 ITSI | FSRD - Prodi Strategi & Rekayasa Daya</p>
+        <p class="small mb-0">Driven by Ambition, Built by Code.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+</body>
+</html>

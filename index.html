@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSI | FSRD - Beranda</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* [CSS Anda yang lain tetap sama] */
+        /* --- CSS KUSTOM UTAMA --- */
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f4f4f4;
+        }
+        .cinzel-font {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Warna Kustom ITSI/FSRD */
+        .bg-itsi-dark { background-color: #002D62 !important; } /* Biru Tua Formal */
+        .text-itsi-blue { color: #002D62 !important; }
+        .border-itsi-gold { border-color: #FFD700 !important; } /* Emas */
+        .bg-gold-light { background-color: #fff8e1; } /* Latar belakang emas ringan */
+
+        /* Warna Kustom HCMAS (NAVBAR DIJAGA TETAP SAMA) */
+        .bg-hmas-nav { background-color: #5d4037 !important; } /* Dipertahankan untuk konsistensi tema House */
+        .dropdown-menu { background-color: #5d4037; }
+        .dropdown-item:hover { background-color: #a46d12; }
+
+        /* HEADER & BANNER YANG LEBIH MEWAH */
+        .main-header {
+            background-image: linear-gradient(rgba(0, 45, 98, 0.8), rgba(0, 45, 98, 0.8)), url('banner_magic_bg.jpg'); 
+            background-attachment: fixed; 
+            background-size: cover;
+            color: white;
+            padding: 80px 0; 
+            border-bottom: 8px solid #FFD700;
+            margin-bottom: 0;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Konten Utama */
+        main {
+            min-height: 70vh;
+        }
+        
+        /* PROGRAM STUDI CARD HOVER EFFECT */
+        .prodi-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.125);
+            text-decoration: none;
+            display: block; 
+        }
+        .prodi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 45, 98, 0.2) !important;
+            border-color: #002D62 !important;
+        }
+        .prodi-card .card-text { color: #495057; }
+        .prodi-card h5 { color: #002D62; }
+
+
+        /* Gaya Khusus Galeri */
+        .gallery-item {
+            height: 250px; 
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+             transform: scale(1.05);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        /* Gaya Profil Dekan */
+        .profile-img {
+            width: 150px; 
+            height: 150px; 
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header text-center">
+        <h1 class="cinzel-font display-4 fw-bold">Fakultas Sihir dan Rekayasa Daya (FSRD)</h1>
+        <p class="lead mt-3">Menguasai Energi, Mencipta Peradaban</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg sticky-top bg-hmas-nav shadow">
+        <div class="container-fluid container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav text-uppercase fw-bold">
+                    <li class="nav-item">
+                        <a class="nav-link text-white active" aria-current="page" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Program Studi
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow">
+                            <li><a class="dropdown-item" href="ravenclaw.html">Ravenclaw (Arcana Intelektual)</a></li>
+                            <li><a class="dropdown-item" href="gryffindor.html">Gryffindor (Pertahanan Magis)</a></li>
+                            <li><a class="dropdown-item" href="hufflepuff.html">Hufflepuff (Herbologi & Ekologi)</a></li>
+                            <li><a class="dropdown-item" href="slytherin.html">Slytherin (Strategi & Rekayasa Daya)</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="penyihir.html">Penyihir</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="pengumuman.html">Pengumuman</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="py-5">
+        <div class="container bg-white p-5 shadow rounded-3">
+            
+            <section id="itsi-intro" class="mb-5 p-5 bg-itsi-dark text-white rounded-3 shadow-lg">
+                <div class="row align-items-center">
+                    <div class="col-md-9">
+                        <h2 class="cinzel-font display-6 fw-bold border-bottom pb-3 mb-3 border-itsi-gold">Institut Teknologi dan Sihir Indonesia (ITSI)</h2>
+                        <p class="lead">ITSI adalah institusi pendidikan tinggi terdepan yang menggabungkan ilmu pengetahuan teknologi dengan dimensi magis, menyiapkan lulusan untuk menghadapi tantangan di Era Magis Modern.</p>
+                        <p class="mb-0 fst-italic">ITSI menjunjung tinggi inovasi dan aplikasi praktis sihir dalam rekayasa dan pembangunan, sebagai fondasi bagi Fakultas Sihir dan Rekayasa Daya.</p>
+                    </div>
+                    <div class="col-md-3 text-center">
+                        <i class="bi bi-mortarboard-fill display-1 text-warning mb-3"></i>
+                        <h4 class="cinzel-font fw-bold border-top pt-2 border-itsi-gold mt-3">Motto Kampus</h4>
+                        <span class="badge text-bg-warning fs-6 p-2">“Menempa Generasi Unggul di Era Magis Modern.”</span>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="fsrd-intro" class="mb-5">
+                <h2 class="cinzel-font text-itsi-blue pb-3 mb-4 border-bottom border-itsi-gold"><i class="bi bi-gear-fill me-2"></i>Tentang Fakultas Sihir dan Rekayasa Daya (FSRD)</h2>
+                
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <p class="fs-5 fw-light">FSRD merupakan jantung keilmuan magis-teknis di ITSI. Fakultas ini didirikan atas dasar kebutuhan mendesak akan Tehnisi & Insinyur Sihir yang mampu mengkonversi dan mengendalikan daya magis untuk infrastruktur publik, industri, dan pertahanan.</p>
+                        <p>Fakultas kami berdedikasi menghasilkan lulusan yang tidak hanya menguasai teori mantra, tetapi juga mampu merancang sistem rekayasa yang efisien dan aman secara magis.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-gold-light p-3 border-itsi-gold border-3 shadow">
+                            <i class="bi bi-lightning-charge-fill text-itsi-blue display-4 text-center"></i>
+                            <p class="mb-0 text-center text-itsi-blue fw-bold fs-5 mt-2">Fokus Utama:</p>
+                            <p class="mb-0 text-center fst-italic">Rekayasa Energi dan Pembangunan Peradaban Magis.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="my-5">
+
+            <section id="program-studi" class="mb-5">
+                <h2 class="cinzel-font text-itsi-blue pb-3 mb-4 border-bottom border-itsi-gold"><i class="bi bi-book-fill me-2"></i>Program Studi Sarjana Unggulan</h2>
+                <p class="text-center mb-5 text-muted">Empat pilar program studi yang mencetak insinyur sihir masa depan.</p>
+                
+                <div class="row text-center">
+                    
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <a href="ravenclaw.html" class="prodi-card text-decoration-none">
+                            <div class="card h-100 p-3 shadow-sm border-primary">
+                                <i class="bi bi-lightbulb-fill display-4 text-primary mb-2"></i>
+                                <h5 class="fw-bold">Arcana Intelektual</h5>
+                                <hr class="mx-auto w-50">
+                                <p class="card-text small">Mempelajari teori sihir tingkat lanjut, fisika mantra, dan metode penelitian untuk mencetak peneliti magis.</p>
+                                <span class="badge bg-primary mt-auto">#Teori & Riset</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <a href="gryffindor.html" class="prodi-card text-decoration-none">
+                            <div class="card h-100 p-3 shadow-sm border-danger">
+                                <i class="bi bi-shield-fill display-4 text-danger mb-2"></i>
+                                <h5 class="fw-bold text-danger">Pertahanan Magis</h5>
+                                <hr class="mx-auto w-50">
+                                <p class="card-text small">Mendalami teknik perlindungan, duel etis, kontra-kutukan, dan kepemimpinan dalam situasi darurat.</p>
+                                <span class="badge bg-danger mt-auto">#Aksi & Keamanan</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <a href="hufflepuff.html" class="prodi-card text-decoration-none">
+                            <div class="card h-100 p-3 shadow-sm border-success">
+                                <i class="bi bi-tree-fill display-4 text-success mb-2"></i>
+                                <h5 class="fw-bold text-success">Herbologi & Ekologi</h5>
+                                <hr class="mx-auto w-50">
+                                <p class="card-text small">Mengkaji tanaman, makhluk, dan energi alami demi menjaga harmoni dan keberlanjutan ekosistem magis.</p>
+                                <span class="badge bg-success mt-auto">#Alam & Konservasi</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 mb-4">
+                        <a href="slytherin.html" class="prodi-card text-decoration-none">
+                            <div class="card h-100 p-3 shadow-sm border-dark">
+                                <i class="bi bi-bricks display-4 text-dark mb-2"></i>
+                                <h5 class="fw-bold text-dark">Rekayasa Daya</h5>
+                                <hr class="mx-auto w-50">
+                                <p class="card-text small">Mengembangkan penguasaan energi sihir, transmisi, dan strategi rekayasa daya untuk infrastruktur.</p>
+                                <span class="badge bg-secondary mt-auto">#Teknis & Aplikasi</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <a href="ravenclaw.html" class="btn btn-lg bg-itsi-dark text-white shadow-lg fw-bold px-5">
+                        <i class="bi bi-arrow-right-circle me-2"></i> Jelajahi Program Studi Lebih Lanjut
+                    </a>
+                </div>
+            </section>
+
+            <hr class="my-5">
+
+            <section id="galeri" class="mb-5">
+                <h2 class="cinzel-font text-itsi-blue pb-3 mb-4 border-bottom border-itsi-gold"><i class="bi bi-camera-fill me-2"></i>Galeri Kampus dan Fasilitas FSRD</h2>
+                <div class="row g-4"> 
+                    <div class="col-md-3 col-sm-6">
+                        <div class="gallery-item">
+                            <img src="foto1.jpg" class="img-fluid" alt="Laboratorium Transfigurasi">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="gallery-item">
+                            <img src="foto2.jpg" class="img-fluid" alt="Mahasiswa di Kelas Mantra">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="gallery-item">
+                            <img src="foto3.jpg" class="img-fluid" alt="Gedung Utama ITSI">
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="gallery-item">
+                            <img src="foto4.jpg" class="img-fluid" alt="Area Hijau Herbologi">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="my-5">
+            
+            <section id="dekan" class="text-center bg-light p-4 rounded-3 shadow-sm">
+                <h2 class="cinzel-font text-itsi-blue pb-3 mb-4 border-bottom border-itsi-gold"><i class="bi bi-person-bounding-box me-2"></i>Pimpinan Fakultas</h2>
+                <div class="card mx-auto shadow-lg border-itsi-gold border-4" style="max-width: 450px;">
+                    <div class="card-body p-4">
+                        <img src="dekan.jpg" class="rounded-circle mb-3 border border-5 border-warning profile-img" alt="Prof. Drs. Emma Watson">
+                        <h4 class="card-title text-itsi-blue cinzel-font fw-bold mt-2">Prof. Drs. Emma Watson, M.Eng.Mag.</h4>
+                        <p class="text-muted mb-3 fs-5">Dekan Fakultas Sihir dan Rekayasa Daya (FSRD)</p>
+                        <hr>
+                        <p class="card-text small fst-italic">"Pakar Etika Rekayasa Sihir dan Transmutasi Energi Dimensi. Memimpin FSRD dengan visi inovasi dan integritas akademik."</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-itsi-dark text-white text-center py-4 mt-5">
+        <p class="mb-1">&copy; 2025 Fakultas Sihir dan Rekayasa Daya (FSRD)</p>
+        <p class="mb-1"> Institut Teknologi dan Sihir Indonesia (ITSI) </p>
+        <p class="small mb-0">Powered by Magic and Bootstrap 5.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
